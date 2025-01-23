@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 50px;
+            }
+            label {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            input[type="number"] {
+                width: 200px;
+                height: 25px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                margin-bottom: 15px;
+                padding: 5px;
+            }
+            input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                padding: 10px 20px;
+                margin-top: 20px;
+            }
+            input[type="submit"]:hover {
+                background-color: #006af5;
+            }
+            .result {
+                margin-top: 20px;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <form><h2>Customer Personality Analysis<br></h2></form>
+        <form action='/predict' method="POST">
+            Education: <input type='float' name='Education'><br>
+            Income: <input type='float' name='Income'><br>
+            Kidhome: <input type='float' name='Kidhome'><br>
+            Teenhome: <input type='float' name='Teenhome'><br>
+            Recency: <input type='float' name='Recency'><br>
+            MntWines: <input type='float' name='MntWines'><br>
+            MntFruits: <input type='float' name='MntFruits'><br>
+            MntMeatProducts: <input type='float' name='MntMeatProducts'><br>
+            MntFishProducts: <input type='float' name='MntFishProducts'><br>
+            MntSweetProducts: <input type='float' name='MntSweetProducts'><br>
+            MntGoldProds: <input type='float' name='MntGoldProds'><br>
+            NumDealsPurchases: <input type='float' name='NumDealsPurchases'><br>
+            NumWebPurchases: <input type='float' name='NumWebPurchases'><br>
+            NumCatalogPurchases: <input type='float' name='NumCatalogPurchases'><br>
+            NumStorePurchases: <input type='float' name='NumStorePurchases'><br>
+            NumWebVisitsMonth: <input type='float' name='NumWebVisitsMonth'><br>
+            AcceptedCmp3: <input type='float' name='AcceptedCmp3'><br>
+            AcceptedCmp4: <input type='float' name='AcceptedCmp4'><br>
+            AcceptedCmp5: <input type='float' name='AcceptedCmp5'><br>
+            AcceptedCmp1: <input type='float' name='AcceptedCmp1'><br>
+            AcceptedCmp2: <input type='float' name='AcceptedCmp2'><br>
+            Complain: <input type='float' name='Complain'><br>
+            Response: <input type='float' name='Response'><br>
+            Age: <input type='float' name='Age'><br>
+            Spent: <input type='float' name='Spent'><br>
+            Living_With: <input type='float' name='Living_With'><br>
+            Children: <input type='float' name='Children'><br>
+            Family_Size: <input type='float' name='Family_Size'><br>
+            Is_Parent: <input type='float' name='Is_Parent'><br>
+            Total_Promos: <input type='float' name='Total_Promos'><br>
+
+            <h3>Class: {{result}}<br></h3>
+            <input type='submit' value='Predict'>
+        </form>
+    </body>
+</html>
+
+# Project By : Prasad Jadhav
